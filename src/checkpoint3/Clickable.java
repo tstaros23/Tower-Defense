@@ -1,4 +1,4 @@
-package checkpoint2;
+package checkpoint3;
 
 public interface Clickable
 {

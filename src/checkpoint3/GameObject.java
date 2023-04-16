@@ -1,4 +1,4 @@
-package checkpoint2;
+package checkpoint3;
 
 abstract public class GameObject implements Animatable
 {

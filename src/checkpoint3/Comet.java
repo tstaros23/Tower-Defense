@@ -1,4 +1,4 @@
-package checkpoint2;
+package checkpoint3;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
