@@ -57,4 +57,5 @@ public class Generator extends GameObject
     public void draw(Graphics g)
     {
     }
+    // how long till my next comet
 }

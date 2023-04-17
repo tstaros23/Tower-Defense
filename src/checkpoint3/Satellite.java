@@ -29,6 +29,7 @@ public class Satellite extends GameObject implements Clickable
     {
         if (isMoving)
             location = state.getMouseLoc();
+        // else shoot
     }
 
     /**

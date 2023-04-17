@@ -32,7 +32,7 @@ public class GameState
     }
     public double getElapsedTime ()
     {
-        return elapsedTime;
+        return 0.016;
     }
 
     /**
