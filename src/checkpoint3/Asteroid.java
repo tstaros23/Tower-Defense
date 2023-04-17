@@ -3,7 +3,7 @@ package checkpoint3;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class Asteroid extends GameObject
+public class Asteroid extends GameObject implements Targetable
 {
     // Instance variables
     private Control control;
@@ -52,5 +52,12 @@ public class Asteroid extends GameObject
         BufferedImage asteroid = control.getImage("asteroid.png");
         Point loc = control.getPath().convertToCoordinates(pathPercentage);
         g.drawImage(asteroid, loc.x - asteroid.getWidth()/2, loc.y - asteroid.getHeight()/2, null);
+    }
+
+    @Override
+    public Point getLocation() {
+        //  asteroid coordinates: Point loc = control.getPath().convertToCoordinates(pathPercentage);
+        // towers can now find the nearby targetable object
+        return control.getPath().convertToCoordinates(pathPercentage);
     }
 }

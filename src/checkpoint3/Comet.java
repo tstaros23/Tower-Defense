@@ -3,7 +3,7 @@ package checkpoint3;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class Comet extends GameObject
+public class Comet extends GameObject implements Targetable
 {
     // instance variables
 
@@ -53,5 +53,10 @@ public class Comet extends GameObject
         BufferedImage comet = control.getImage("comet.png");
         Point loc = control.getPath().convertToCoordinates(pathPercentage);
         g.drawImage(comet, loc.x - comet.getWidth()/2, loc.y - comet.getHeight()/2, null);
+    }
+
+    @Override
+    public Point getLocation() {
+        return control.getPath().convertToCoordinates(pathPercentage);
     }
 }

@@ -45,7 +45,7 @@ public class Control implements Runnable, ActionListener, MouseListener, MouseMo
         state.addGameObject(menuArea);
         state.addGameObject(new Asteroid(this, state));
         state.addGameObject(new Comet(this, state));
-
+        state.addGameObject(new Generator(this, state));
         menuArea.setUpMenuArea();
 
         state.finishFrame();
@@ -139,9 +139,12 @@ public class Control implements Runnable, ActionListener, MouseListener, MouseMo
         // Main update loop
 
         state.startFrame();
+        // loop through all game objects, update each one
 
         for (Animatable a : state.getCurrentObjects())
-            a.update(0);
+            a.update(state.getElapsedTime());
+
+        // if the mouse was pressed, let the objects decide what to do
 
         if (mousePressed)
             for (int pos = state.getCurrentObjects().size() - 1;

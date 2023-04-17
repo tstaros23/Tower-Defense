@@ -18,6 +18,7 @@ public class GameState
     private List<GameObject> nextFrameObjects;
     private int cityCount;
     private Point mouseLocation;
+    private double elapsedTime;
 
     /**
      * Constructor for the GameState class.
@@ -28,6 +29,10 @@ public class GameState
     {
         currentFrameObjects = new ArrayList<GameObject>();
         cityCount = 20;
+    }
+    public double getElapsedTime ()
+    {
+        return elapsedTime;
     }
 
     /**
@@ -92,6 +97,7 @@ public class GameState
 
     public void startFrame ()
     {
+
         nextFrameObjects = new ArrayList<GameObject>();    // Creates empty list
         nextFrameObjects.addAll(currentFrameObjects);      // Add all the current ones to the new list.
     }
@@ -123,5 +129,14 @@ public class GameState
 
         currentFrameObjects = nextFrameObjects;
         nextFrameObjects = null;  // This makes it clear there is only a current list now.
+    }
+
+    public Targetable getNearestTargetableObject(Point here)
+    {
+        // finds nearest targetable object in the game and return it to us.
+        //satellite calls this function to find the nearest object
+        // use optimization loop
+        // return null if there are no targetable object
+        return null;
     }
 }
