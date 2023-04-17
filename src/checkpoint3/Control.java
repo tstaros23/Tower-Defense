@@ -102,6 +102,8 @@ public class Control implements Runnable, ActionListener, MouseListener, MouseMo
 
     public Path getPath ()
     {
+        if (path == null)
+            throw new IllegalStateException("Path not initialized");
         return path;
     }
 

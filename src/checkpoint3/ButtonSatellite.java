@@ -1,7 +1,6 @@
 package checkpoint3;
 
 import java.awt.*;
-import java.awt.image.BufferedImage;
 
 public class ButtonSatellite extends GameObject implements Clickable
 {
