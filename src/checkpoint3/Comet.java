@@ -5,12 +5,17 @@ import java.awt.image.BufferedImage;
 
 public class Comet extends GameObject
 {
-    // Uncommented -- add contracts/comments to understand what's going
-    // on.  (Style requirements checked on each checkpoint.)
+    // instance variables
 
     private Control control;
     private GameState state;
     private double pathPercentage;
+
+    /**
+     * Constructs a new Comet object with the specified Control and GameState.
+     * @param control The Control object of the game
+     * @param state The GameState object of the game
+     */
 
     public Comet(Control control, GameState state)
     {
@@ -18,11 +23,17 @@ public class Comet extends GameObject
         this.state = state;
         pathPercentage = 0.0;
     }
-
+    /**
+     * Updates the position of the comet based on the amount of time elapsed.
+     * @param timeElapsed The amount of time elapsed since the last update
+     */
     @Override
     public void update(double timeElapsed)
     {
         pathPercentage += 0.0015;
+
+        // If the comet has reached the end of its path, remove it from the game
+        // and add a new Comet object to the GameState.
 
         if (pathPercentage >= 1.00)
         {
@@ -32,7 +43,10 @@ public class Comet extends GameObject
             state.addGameObject(new Comet(control, state));
         }
     }
-
+    /**
+     * Draws the comet at its current position.
+     * @param g The Graphics object used to draw the comet
+     */
     @Override
     public void draw(Graphics g)
     {

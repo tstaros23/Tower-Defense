@@ -6,8 +6,6 @@ import java.awt.image.BufferedImage;
 
 public class View extends JPanel
 {
-    // Somewhat uncommented -- add contracts/comments to understand what's going
-    // on.  (Style requirements checked on each checkpoint.)
 
     // Fields
 

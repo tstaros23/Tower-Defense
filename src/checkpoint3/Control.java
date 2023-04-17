@@ -11,8 +11,7 @@ import java.util.TreeMap;
 
 public class Control implements Runnable, ActionListener, MouseListener, MouseMotionListener
 {
-    // Uncommented -- add contracts/comments to understand what's going
-    // on.  (Style requirements checked on each checkpoint.)
+    // fields
 
     private View view;
     private GameState state;
@@ -20,6 +19,11 @@ public class Control implements Runnable, ActionListener, MouseListener, MouseMo
     private Path path;
     private TreeMap<String,BufferedImage> imageCache;
     public boolean mousePressed;
+
+    /**
+     * Runs the game.
+     * Initializes the image cache, path, game state, view, and timer, and starts the timer.
+     */
 
     public void run ()
     {
@@ -50,9 +54,12 @@ public class Control implements Runnable, ActionListener, MouseListener, MouseMo
         timer.start();
     }
 
-    // Loads an image
-
-    // Load the background image.
+    /**
+     * Loads an image from the given filename.
+     *
+     * @param filename The filename of the image to load
+     * @return The loaded image, or null if the file could not be read
+     */
 
     private BufferedImage loadImage (String filename)
     {
@@ -68,6 +75,13 @@ public class Control implements Runnable, ActionListener, MouseListener, MouseMo
         }
     }
 
+    /**
+     * Returns the image with the given filename, loading it if necessary.
+     *
+     * @param filename The filename of the image to return
+     * @return The image with the given filename, or null if the file could not be read
+     */
+
     public BufferedImage getImage (String filename)
     {
         if (! imageCache.containsKey(filename))
@@ -79,7 +93,12 @@ public class Control implements Runnable, ActionListener, MouseListener, MouseMo
         return imageCache.get(filename);
     }
 
-    // Load a path
+    /**
+     * Loads the game path from the given filename.
+     *
+     * @param filename The filename of the path file to load
+     * @return The loaded path, or null if the file could not be loaded
+     */
 
     private Path loadPath (String filename)
     {
@@ -98,15 +117,22 @@ public class Control implements Runnable, ActionListener, MouseListener, MouseMo
         }
     }
 
-    // Get the path
+    /**
+     * Returns the game path.
+     *
+     * @return The game path
+     */
 
     public Path getPath ()
     {
-        if (path == null)
-            throw new IllegalStateException("Path not initialized");
         return path;
     }
 
+    /**
+     * Handles timer events by updating the game state and rendering the view.
+     *
+     * @param e The ActionEvent that triggered the timer
+     */
     @Override
     public void actionPerformed(ActionEvent e)
     {
@@ -142,7 +168,11 @@ public class Control implements Runnable, ActionListener, MouseListener, MouseMo
     {
 
     }
-
+    /**
+     * Handles mouse clicks by setting the mouse location and flagging the mouse as pressed.
+     *
+     * @param e The MouseEvent that triggered the click
+     */
     @Override
     public void mousePressed(MouseEvent e)
     {
@@ -167,6 +197,11 @@ public class Control implements Runnable, ActionListener, MouseListener, MouseMo
     {
 
     }
+    /**
+     * Handles mouse movements by setting the mouse location.
+     *
+     * @param e The MouseEvent that triggered the movement
+     */
 
     @Override
     public void mouseDragged(MouseEvent e)

@@ -1,11 +1,25 @@
+/**
+
+ The "ButtonSatellite" class represents a clickable button object in a graphical environment
+ that creates a "Satellite" object when clicked. It extends the "GameObject" superclass and
+ implements the "Clickable" interface.
+ */
+
 package checkpoint3;
 
 import java.awt.*;
 
 public class ButtonSatellite extends GameObject implements Clickable
 {
+    // instance variables
     private Control control;
     private GameState state;
+
+    /**
+     Constructor for the ButtonSatellite class.
+     @param control a reference to a Control object.
+     @param state a reference to a GameState object.
+     */
 
     public ButtonSatellite(Control control, GameState state)
     {
@@ -14,12 +28,21 @@ public class ButtonSatellite extends GameObject implements Clickable
         this.state = state;
     }
 
+    /**
+     Does not update the state of the ButtonSatellite object.
+     @param timeElapsed the time elapsed since the last update, in seconds.
+     */
+
     @Override
     public void update(double timeElapsed)
     {
 
     }
 
+    /**
+     Renders the button object on the screen using the specified Graphics object.
+     @param g the Graphics object used to draw the object.
+     */
     @Override
     public void draw(Graphics g)
     {
@@ -30,6 +53,11 @@ public class ButtonSatellite extends GameObject implements Clickable
 
          g.drawImage(control.getImage("probe.png"), 640, 410, null);
     }
+
+    /**
+     Checks if the button is clicked and creates a new Satellite object if it is.
+     @return true if the button is clicked, false otherwise.
+     */
 
     @Override
     public boolean consumeClick()

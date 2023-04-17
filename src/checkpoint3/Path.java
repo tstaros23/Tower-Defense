@@ -6,8 +6,6 @@ import java.util.Scanner;
 
 public class Path
 {
-	// Mostly uncommented -- add contracts/comments to understand what's going
-	// on.  (Style requirements checked on each checkpoint.)
 
 	private ArrayList<Point> pathPoints;
 
@@ -18,6 +16,11 @@ public class Path
 		pathPoints = new ArrayList<Point>();
 	}
 
+	/**
+	 * Constructs a path by reading in a list of points from a Scanner object.
+	 *
+	 * @param in  a Scanner object used to read the list of points
+	 */
 	public Path(Scanner in)
 	{
 		pathPoints = new ArrayList<Point>();
@@ -54,20 +57,42 @@ public class Path
 		return pathPoints.size();
 	}
 
+	/**
+	 * get the x coordinate from a path using an index
+	 * @param n is the index
+	 * @return return the x coordinate
+	 */
 	public int getX (int n)
 	{
 		return pathPoints.get(n).x;
 	}
+
+	/**
+	 * get the y coordinate from a path using an index
+	 * @param n is the index
+	 * @return return the y coordinate
+	 */
 
 	public int getY (int n)
 	{
 		return pathPoints.get(n).y;
 	}
 
+	/**
+	 * function used to add a new point to the path array list
+	 * @param x x coordinate
+	 * @param y y coordinate
+	 */
+
 	public void add (int x, int y)
 	{
 		pathPoints.add(new Point(x,y));
 	}
+
+	/**
+	 * function used to convert the path of points into a string
+	 * @return returns the string of points
+	 */
 
 	public String toString ()
 	{
@@ -76,6 +101,11 @@ public class Path
 			result += p.x + " " + p.y + "\n";
 		return result;
 	}
+
+	/**
+	 * until last point  is null, the current point and next point will be drawn
+	 * @param g graphics
+	 */
 
 	public void draw (Graphics g)
 	{

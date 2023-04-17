@@ -5,13 +5,16 @@ import java.awt.image.BufferedImage;
 
 public class Asteroid extends GameObject
 {
-    // Uncommented -- add contracts/comments to understand what's going
-    // on.  (Style requirements checked on each checkpoint.)
-
+    // Instance variables
     private Control control;
     private GameState state;
     private double pathPercentage;
 
+    /**
+     Constructor for the Asteroid class.
+     @param control a reference to a Control object.
+     @param state a reference to a GameState object.
+     */
     public Asteroid (Control control, GameState state)
     {
         this.control = control;
@@ -19,6 +22,11 @@ public class Asteroid extends GameObject
         pathPercentage = 0.0;
     }
 
+    /**
+     Updates the state of the Asteroid object based on the time elapsed since the last update.
+     Increments the path percentage and adds a new Asteroid object if the path percentage exceeds 1.0.
+     @param timeElapsed the time elapsed since the last update, in seconds.
+     */
     @Override
     public void update(double timeElapsed)
     {
@@ -32,6 +40,11 @@ public class Asteroid extends GameObject
             state.addGameObject(new Asteroid(control, state));
         }
     }
+
+    /**
+     Renders the image of the Asteroid object on the screen using the specified Graphics object.
+     @param g the Graphics object used to draw the object.
+     */
 
     @Override
     public void draw(Graphics g)
