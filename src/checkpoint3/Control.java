@@ -43,7 +43,6 @@ public class Control implements Runnable, ActionListener, MouseListener, MouseMo
 
         state.addGameObject(new Background(this, state));
         state.addGameObject(menuArea);
-        //state.addGameObject(new Comet(this, state));
         state.addGameObject(new Generator(this, state));
 
         menuArea.setUpMenuArea();

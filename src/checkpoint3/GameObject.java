@@ -5,7 +5,9 @@
 
 package checkpoint3;
 
-abstract public class GameObject implements Animatable
+import java.awt.*;
+
+abstract public class GameObject implements Animatable, Targetable
 
     /**
      * A boolean value indicating whether the game object has expired and should be removed
@@ -13,6 +15,7 @@ abstract public class GameObject implements Animatable
      */
 {
     protected boolean hasExpired;
+    private Point location;
 
     /**
      * Constructs a new game object with a default expired state of false.
@@ -32,4 +35,9 @@ abstract public class GameObject implements Animatable
     {
         return hasExpired;
     }
+    public Point getLocation ()
+    {
+        return location;
+    }
+
 }

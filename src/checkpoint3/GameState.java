@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.awt.Point;
 
+import static java.lang.Math.abs;
+
 public class GameState
 {
 
@@ -133,16 +135,31 @@ public class GameState
             if (go.hasExpired())
                 nextFrameObjects.remove(go);
 
+
         currentFrameObjects = nextFrameObjects;
         nextFrameObjects = null;  // This makes it clear there is only a current list now.
     }
 
-    public Targetable getNearestTargetableObject(Point here)
+    public Targetable getNearestTargetableObject(Point point)
     {
         // finds nearest targetable object in the game and return it to us.
         //satellite calls this function to find the nearest object
         // use optimization loop
         // return null if there are no targetable object
-        return null;
+        GameObject current = currentFrameObjects.get(0);
+        for (GameObject go : currentFrameObjects)
+            if (go == null)
+                return null;
+            else if (go != null)
+            {
+                // get absolute value of the first gameObject in the list x and y value subtracted from the satellite x and y value
+                // add the differences together and compare to the added differences of the game object in the loop
+                // assign game object in the iteration to the current object if the difference is less than the current difference
+                double currentDifference = abs(current.getLocation().getX() - point.x) + abs(current.getLocation().getY() - point.y);
+                double goDifference = abs(go.getLocation().getX() - point.x) + abs(go.getLocation().getY() - point.y) ;
+                if (goDifference < currentDifference)
+                    current = go;
+            }
+            return current;
     }
 }

@@ -29,6 +29,9 @@ public class Satellite extends GameObject implements Clickable
     {
         if (isMoving)
             location = state.getMouseLoc();
+        else {
+
+        }
         // else shoot
     }
 
@@ -66,4 +69,6 @@ public class Satellite extends GameObject implements Clickable
 
         return false;
     }
+
+
 }
