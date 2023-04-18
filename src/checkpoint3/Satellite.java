@@ -30,8 +30,10 @@ public class Satellite extends GameObject implements Clickable
     {
         if (isMoving)
             location = state.getMouseLoc();
-        else
-            System.out.println(state.getNearestTargetableObject(location));
+        else if (state.getNearestTargetableObject(location) != null)
+        {
+            System.out.println(location.distance((state.getNearestTargetableObject(location).getLocation().getX()), (state.getNearestTargetableObject(location).getLocation().getY() )));
+        }
         // else shoot
     }
 
