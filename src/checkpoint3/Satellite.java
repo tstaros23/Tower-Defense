@@ -8,6 +8,7 @@ public class Satellite extends GameObject implements Clickable
     private Control control;
     private GameState state;
     private Point location;
+    private Point lastLocation;
     private boolean isMoving;
 
     //constructor
@@ -29,9 +30,8 @@ public class Satellite extends GameObject implements Clickable
     {
         if (isMoving)
             location = state.getMouseLoc();
-        else {
-
-        }
+        else
+            System.out.println(state.getNearestTargetableObject(location));
         // else shoot
     }
 
@@ -56,10 +56,8 @@ public class Satellite extends GameObject implements Clickable
      */
 
     @Override
-    public boolean consumeClick()
-    {
-        if (isMoving)
-        {
+    public boolean consumeClick() {
+        if (isMoving) {
             Point mouseLoc = state.getMouseLoc();
             if (mouseLoc.x < 0 || mouseLoc.y < 0 || mouseLoc.x > 600 || mouseLoc.y > 600)
                 hasExpired = true;
@@ -70,5 +68,9 @@ public class Satellite extends GameObject implements Clickable
         return false;
     }
 
+    public Point getLocation()
+    {
+        return location;
+    }
 
 }

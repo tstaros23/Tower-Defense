@@ -40,4 +40,9 @@ abstract public class GameObject implements Animatable, Targetable
         return location;
     }
 
+    public void setLocation(Point location)
+    {
+        this.location = location;
+    }
+
 }

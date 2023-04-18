@@ -146,20 +146,22 @@ public class GameState
         //satellite calls this function to find the nearest object
         // use optimization loop
         // return null if there are no targetable object
-        GameObject current = currentFrameObjects.get(0);
-        for (GameObject go : currentFrameObjects)
-            if (go == null)
-                return null;
-            else if (go != null)
-            {
-                // get absolute value of the first gameObject in the list x and y value subtracted from the satellite x and y value
-                // add the differences together and compare to the added differences of the game object in the loop
-                // assign game object in the iteration to the current object if the difference is less than the current difference
-                double currentDifference = abs(current.getLocation().getX() - point.x) + abs(current.getLocation().getY() - point.y);
-                double goDifference = abs(go.getLocation().getX() - point.x) + abs(go.getLocation().getY() - point.y) ;
-                if (goDifference < currentDifference)
-                    current = go;
-            }
-            return current;
+
+            GameObject current = null;
+            for (GameObject go : currentFrameObjects)
+                if (go instanceof Comet || go instanceof Asteroid && current == null)
+                    current = go; // initialize current to the first instance of Comet or Asteroid
+                else if (go instanceof Comet || go instanceof Asteroid)
+
+                {
+                    // get absolute value of the first gameObject in the list x and y value subtracted from the satellite x and y value
+                    // add the differences together and compare to the added differences of the game object in the loop
+                    // assign game object in the iteration to the current object if the difference is less than the current difference
+                    double currentDifference = abs(current.getLocation().x - point.x) + abs(current.getLocation().y - point.y);
+                    double goDifference = abs(go.getLocation().getX() - point.x) + abs(go.getLocation().getY() - point.y);
+                    if (goDifference < currentDifference)
+                        current = go;
+                }
+                return current;
     }
 }
