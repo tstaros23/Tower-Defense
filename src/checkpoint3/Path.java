@@ -25,8 +25,9 @@ public class Path
 	{
 		pathPoints = new ArrayList<Point>();
 
-		int size = in.nextInt();
-		for (int i = 0; i < size; i++)
+		//int size = in.nextInt();
+		//for (int i = 0; i < size; i++)
+		for (int i = 0; i < 9; i++)
 			pathPoints.add(new Point(in.nextInt(), in.nextInt()));
 
  		// Compute the path length.

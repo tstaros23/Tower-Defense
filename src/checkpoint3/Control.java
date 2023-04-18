@@ -30,7 +30,7 @@ public class Control implements Runnable, ActionListener, MouseListener, MouseMo
         imageCache = new TreeMap<String,BufferedImage>();
         mousePressed = false;
 
-        path = loadPath("space_test.txt");
+        path = loadPath("path90");
 
         state = new GameState();
         view = new View(this, state);
