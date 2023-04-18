@@ -9,6 +9,7 @@ public class Comet extends GameObject implements Targetable
 
     private Control control;
     private GameState state;
+    private double age;
     private double pathPercentage;
 
     /**
@@ -30,17 +31,15 @@ public class Comet extends GameObject implements Targetable
     @Override
     public void update(double timeElapsed)
     {
-        pathPercentage += 0.0015;
-
-        // If the comet has reached the end of its path, remove it from the game
-        // and add a new Comet object to the GameState.
+        pathPercentage += (0.0016) * timeElapsed;
+        age += timeElapsed;
+        // System.out.println(pathPercentage);
 
         if (pathPercentage >= 1.00)
         {
             // Remove and add
-
             hasExpired = true;
-            state.addGameObject(new Comet(control, state));
+            //state.addGameObject(new Asteroid(control, state));
         }
     }
     /**

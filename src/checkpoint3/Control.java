@@ -43,9 +43,9 @@ public class Control implements Runnable, ActionListener, MouseListener, MouseMo
 
         state.addGameObject(new Background(this, state));
         state.addGameObject(menuArea);
+        //state.addGameObject(new Comet(this, state));
         state.addGameObject(new Generator(this, state));
-        state.addGameObject(new Comet(this, state));
-        //state.addGameObject(new Generator(this, state));
+
         menuArea.setUpMenuArea();
 
         state.finishFrame();
@@ -136,6 +136,7 @@ public class Control implements Runnable, ActionListener, MouseListener, MouseMo
     @Override
     public void actionPerformed(ActionEvent e)
     {
+
         // Main update loop
 
         state.startFrame();

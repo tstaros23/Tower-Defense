@@ -9,6 +9,7 @@ public class Asteroid extends GameObject implements Targetable
     private Control control;
     private GameState state;
     private double pathPercentage;
+    private double age;
 
     /**
      Constructor for the Asteroid class.
@@ -20,6 +21,7 @@ public class Asteroid extends GameObject implements Targetable
         this.control = control;
         this.state = state;
         pathPercentage = 0.0;
+        age = 0.0;
     }
 
     /**
@@ -30,14 +32,15 @@ public class Asteroid extends GameObject implements Targetable
     @Override
     public void update(double timeElapsed)
     {
-        pathPercentage += 0.001;
+        pathPercentage += (0.0016) * timeElapsed;
+        age += timeElapsed;
+       // System.out.println(pathPercentage);
 
         if (pathPercentage >= 1.00)
         {
             // Remove and add
-
             hasExpired = true;
-            state.addGameObject(new Asteroid(control, state));
+            //state.addGameObject(new Asteroid(control, state));
         }
     }
 

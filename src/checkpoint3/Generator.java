@@ -16,6 +16,11 @@ public class Generator extends GameObject
     private Control control;
     private GameState state;
     private double countDownToNextAsteroid;
+    private double countDownToNextComet;
+    private int asteroidCount;
+    private int cometCount;
+    private int numberOfAsteroids;
+    private int numberOfComets;
 
     /**
      Constructor for the Background class.
@@ -28,7 +33,13 @@ public class Generator extends GameObject
         super();
         this.control = control;
         this.state = state;
+        // time the game has passed
+        countDownToNextComet = 2.0;
         countDownToNextAsteroid = 2.0;
+        asteroidCount = 0;
+        cometCount = 0;
+        numberOfAsteroids = 5;
+        numberOfComets = 2;
     }
 
     /**
@@ -40,11 +51,31 @@ public class Generator extends GameObject
     public void update(double timeElapsed)
     {
         countDownToNextAsteroid -= timeElapsed;
+        countDownToNextComet -= timeElapsed;
 
         if (countDownToNextAsteroid <= 0)
         {
-            countDownToNextAsteroid = 0.5;
+            countDownToNextAsteroid = 300.0;
             state.addGameObject(new Asteroid(control, state));
+            asteroidCount++;
+            if (asteroidCount == numberOfAsteroids)
+            {
+                countDownToNextAsteroid = countDownToNextAsteroid * 5;
+                asteroidCount = 0;
+                numberOfAsteroids++;
+            }
+        }
+        if (countDownToNextComet <= 0)
+        {
+            countDownToNextComet = 300.0;
+            state.addGameObject(new Comet(control, state));
+            cometCount++;
+            if (cometCount == numberOfComets)
+            {
+                countDownToNextComet = countDownToNextComet * 5;
+                cometCount = 0;
+                numberOfComets++;
+            }
         }
     }
 

@@ -19,6 +19,7 @@ public class GameState
     private int cityCount;
     private Point mouseLocation;
     private double elapsedTime;
+    private long lastFrameStartTime;
 
     /**
      * Constructor for the GameState class.
@@ -29,10 +30,11 @@ public class GameState
     {
         currentFrameObjects = new ArrayList<GameObject>();
         cityCount = 20;
+        lastFrameStartTime = System.currentTimeMillis();
     }
     public double getElapsedTime ()
     {
-        return 0.016;
+        return elapsedTime;
     }
 
     /**
@@ -97,6 +99,10 @@ public class GameState
 
     public void startFrame ()
     {
+        // Calculate how much time has elapsed since the previous start frame
+        long currentFrameStartTime = System.currentTimeMillis();
+        elapsedTime = currentFrameStartTime - lastFrameStartTime;
+        lastFrameStartTime = currentFrameStartTime;
 
         nextFrameObjects = new ArrayList<GameObject>();    // Creates empty list
         nextFrameObjects.addAll(currentFrameObjects);      // Add all the current ones to the new list.
