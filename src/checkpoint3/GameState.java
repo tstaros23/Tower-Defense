@@ -148,7 +148,6 @@ public class GameState
         // return null if there are no targetable object
 
             Targetable current = null;
-            Point closest = null;
             boolean first = true;
             for (GameObject go : currentFrameObjects)
             {
@@ -156,19 +155,18 @@ public class GameState
 
                      // initialize current to the first instance of Comet or Asteroid
                  if (go instanceof Targetable)
-
                 {
+                    Targetable target = (Targetable) go;
                     if (first)
                     {
                         current = (Targetable) go;
-                        closest = current.getLocation();
                         first = false;
                     }
                     // get absolute value of the first gameObject in the list x and y value subtracted from the satellite x and y value
                     // add the differences together and compare to the added differences of the game object in the loop
                     // assign game object in the iteration to the current object if the difference is less than the current difference
                     double currentDifference = abs(current.getLocation().getX() - point.getX()) + abs(current.getLocation().getY() - point.getY());
-                    double goDifference = abs(go.getLocation().getX() - point.getX()) + abs(go.getLocation().getY() - point.getY());
+                    double goDifference = abs(target.getLocation().getX() - point.getX()) + abs(target.getLocation().getY() - point.getY());
                     if (goDifference < currentDifference)
                         current = (Targetable) go;
                 }

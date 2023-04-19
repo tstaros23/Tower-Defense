@@ -34,7 +34,7 @@ public class Generator extends GameObject
         this.control = control;
         this.state = state;
         // time the game has passed
-        countDownToNextComet = 2.0;
+        countDownToNextComet = 10.0;
         countDownToNextAsteroid = 2.0;
         asteroidCount = 0;
         cometCount = 0;
@@ -60,7 +60,7 @@ public class Generator extends GameObject
             asteroidCount++;
             if (asteroidCount == numberOfAsteroids)
             {
-                countDownToNextAsteroid = countDownToNextAsteroid * 5;
+                countDownToNextAsteroid = countDownToNextAsteroid * 10;
                 asteroidCount = 0;
                 numberOfAsteroids++;
             }

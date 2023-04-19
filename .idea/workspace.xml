@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04a09404-6f64-4e7c-bf97-02523cb67d74" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/checkpoint3/PhotonTorpedo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 3/checkpoint3/GameObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 3/checkpoint3/GameObject.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 3/checkpoint3/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 3/checkpoint3/GameState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 3/checkpoint3/Generator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 3/checkpoint3/Generator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 3/checkpoint3/PhotonTorpedo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 3/checkpoint3/PhotonTorpedo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 3/checkpoint3/Satellite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 3/checkpoint3/Satellite.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/checkpoint3/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint3/GameObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/checkpoint3/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint3/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkpoint3/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint3/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkpoint3/PhotonTorpedo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint3/PhotonTorpedo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/checkpoint3/Satellite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint3/Satellite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +59,26 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="LookUp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="checkpoint3.LookUp" />
+      <module name="Tower Defense Checkpoint 3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="checkpoint3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LookUp" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1681853964127</updated>
       <workItem from="1681853965178" duration="1138000" />
-      <workItem from="1681855113326" duration="12523000" />
+      <workItem from="1681855113326" duration="23621000" />
     </task>
     <servers />
   </component>
@@ -73,14 +96,11 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/checkpoint3/GameState.java</url>
-          <line>169</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="currentDifference" />
+        <watch expression="currentDifference" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

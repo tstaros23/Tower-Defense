@@ -3,7 +3,7 @@ package checkpoint3;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class PhotonTorpedo extends GameObject implements Targetable {
+public class PhotonTorpedo extends GameObject {
     private Control control;
     private GameState state;
     private Point source;
@@ -28,16 +28,13 @@ public class PhotonTorpedo extends GameObject implements Targetable {
 
     @Override
     public void update(double timeElapsed) {
-        pathPercentage += 0.002;
+        pathPercentage += 0.07;
+
+        Point loc = path.convertToCoordinates(pathPercentage);
+        // check what it is doing with photon debugger
+        double distance = loc.distance(target);
 
         if (pathPercentage >= 1.00)
-        {
-            // Remove and add
-            hasExpired = true;
-        }
-        Point loc = path.convertToCoordinates(pathPercentage);
-        double distance = loc.distance(target);
-        if (distance < 100)
         {
             enemy.hasExpired = true;
             hasExpired = true;

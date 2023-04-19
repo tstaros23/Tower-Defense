@@ -8,7 +8,6 @@ public class Satellite extends GameObject implements Clickable
     private Control control;
     private GameState state;
     private Point location;
-    private Point lastLocation;
     private boolean isMoving;
 
     //constructor
@@ -35,9 +34,12 @@ public class Satellite extends GameObject implements Clickable
         else
         {
             Targetable target = state.getNearestTargetableObject(location);
-            double distance = location.distance((target.getLocation().getX()), (target.getLocation().getY()));
-            if (distance < 300)
-                state.addGameObject(new PhotonTorpedo(control, state, location,  target.getLocation(), (GameObject) target ));
+            if (target != null)
+            {
+                double distance = location.distance((target.getLocation().getX()), (target.getLocation().getY()));
+                if (distance < 300)
+                    state.addGameObject(new PhotonTorpedo(control, state, location,  target.getLocation(), (GameObject) target ));
+            }
 
         }
         // else shoot
