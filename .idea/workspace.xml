@@ -5,13 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04a09404-6f64-4e7c-bf97-02523cb67d74" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/checkpoint3/PhotonTorpedo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 3/checkpoint3/GameObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 3/checkpoint3/GameObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 3/checkpoint3/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 3/checkpoint3/GameState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 3/checkpoint3/Satellite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 3/checkpoint3/Satellite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkpoint3/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint3/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkpoint3/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint3/GameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/checkpoint3/Satellite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint3/Satellite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,11 +65,22 @@
       <option name="presentableId" value="Default" />
       <updated>1681853964127</updated>
       <workItem from="1681853965178" duration="1138000" />
-      <workItem from="1681855113326" duration="775000" />
+      <workItem from="1681855113326" duration="12523000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/checkpoint3/GameState.java</url>
+          <line>169</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

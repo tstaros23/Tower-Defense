@@ -28,11 +28,17 @@ public class Satellite extends GameObject implements Clickable
     @Override
     public void update(double timeElapsed)
     {
-        if (isMoving)
+
+        if (isMoving) {
             location = state.getMouseLoc();
-        else if (state.getNearestTargetableObject(location) != null)
+        }
+        else
         {
-            System.out.println(location.distance((state.getNearestTargetableObject(location).getLocation().getX()), (state.getNearestTargetableObject(location).getLocation().getY() )));
+            Targetable target = state.getNearestTargetableObject(location);
+            double distance = location.distance((target.getLocation().getX()), (target.getLocation().getY()));
+            if (distance < 300)
+                state.addGameObject(new PhotonTorpedo(control, state, location,  target.getLocation(), (GameObject) target ));
+
         }
         // else shoot
     }
@@ -46,7 +52,9 @@ public class Satellite extends GameObject implements Clickable
     public void draw(Graphics g)
     {
         if (location != null)
+        {
             g.drawImage(control.getImage("probe.png"), location.x, location.y, null);
+        }
     }
 
     /**
@@ -64,15 +72,11 @@ public class Satellite extends GameObject implements Clickable
             if (mouseLoc.x < 0 || mouseLoc.y < 0 || mouseLoc.x > 600 || mouseLoc.y > 600)
                 hasExpired = true;
             isMoving = false;
+            location = mouseLoc;
             return true;
         }
 
         return false;
-    }
-
-    public Point getLocation()
-    {
-        return location;
     }
 
 }

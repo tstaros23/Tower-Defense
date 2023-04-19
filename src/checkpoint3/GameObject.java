@@ -7,7 +7,7 @@ package checkpoint3;
 
 import java.awt.*;
 
-abstract public class GameObject implements Animatable, Targetable
+abstract public class GameObject implements Animatable
 
     /**
      * A boolean value indicating whether the game object has expired and should be removed
