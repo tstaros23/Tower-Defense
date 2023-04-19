@@ -1,7 +1,8 @@
 /**
 
- The "Background" class represents the background image in a graphical environment.
- It extends the "GameObject" superclass and implements the "Animatable" interface.
+ The "Generator" class generates the comet and asteroid
+
+
  */
 
 package checkpoint3;
@@ -43,21 +44,28 @@ public class Generator extends GameObject
     }
 
     /**
-     Does not update the state of the Background object.
-     @param timeElapsed the time elapsed since the last update, in seconds.
+     * Updates the state of the game world based on the given elapsed time.
+     * Decreases the countdown timers for asteroids and comets, and if they reach zero,
+     * adds a new asteroid or comet object to the game world. Adjusts the countdown timers,
+     * object counts, and object frequencies based on game state.
+     *
+     * @param timeElapsed the time elapsed since the last update, in seconds
      */
 
     @Override
     public void update(double timeElapsed)
     {
+        // decrease the countdown timers for asteroids and comets
         countDownToNextAsteroid -= timeElapsed;
         countDownToNextComet -= timeElapsed;
 
         if (countDownToNextAsteroid <= 0)
         {
+            // if the countdown timer for asteroids reaches zero, add a new asteroid object
             countDownToNextAsteroid = 300.0;
             state.addGameObject(new Asteroid(control, state));
             asteroidCount++;
+            // if the maximum number of asteroids has been added, adjust the countdown timer and asteroid count
             if (asteroidCount == numberOfAsteroids)
             {
                 countDownToNextAsteroid = countDownToNextAsteroid * 10;

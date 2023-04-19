@@ -20,8 +20,12 @@ public class Satellite extends GameObject implements Clickable
     }
 
     /**
-     * if the satellite is moving, then we want to update the location
-     * @param timeElapsed the time elapsed since the last update, in seconds.
+     * Updates the state of the player object based on the given elapsed time.
+     * If the player is moving, updates the location based on the mouse location.
+     * Otherwise, checks if there is a target object within range, and if so,
+     * creates a new photon torpedo object aimed at the target.
+     *
+     * @param timeElapsed the time elapsed since the last update, in seconds
      */
 
     @Override
@@ -29,15 +33,19 @@ public class Satellite extends GameObject implements Clickable
     {
 
         if (isMoving) {
+            // if the player is moving, update the location based on the mouse location
             location = state.getMouseLoc();
         }
         else
         {
+            // if the player is not moving, check for nearby target objects
             Targetable target = state.getNearestTargetableObject(location);
             if (target != null)
             {
+                // if a nearby target object is found, calculate the distance to it
                 double distance = location.distance((target.getLocation().getX()), (target.getLocation().getY()));
                 if (distance < 300)
+                    // if the target is within range, create a new photon torpedo object aimed at it
                     state.addGameObject(new PhotonTorpedo(control, state, location,  target.getLocation(), (GameObject) target ));
             }
 

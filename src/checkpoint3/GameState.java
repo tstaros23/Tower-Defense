@@ -140,6 +140,12 @@ public class GameState
         nextFrameObjects = null;  // This makes it clear there is only a current list now.
     }
 
+    /**
+     * this method finds the point of the nearest targetable game object
+     *
+     * @param point the satellite location
+     * @return the current asteroid or comet
+     */
     public Targetable getNearestTargetableObject(Point point)
     {
         // finds nearest targetable object in the game and return it to us.
@@ -153,7 +159,7 @@ public class GameState
             {
 
 
-                     // initialize current to the first instance of Comet or Asteroid
+                // if game object is an instance of targetable then assign first targetable to current
                  if (go instanceof Targetable)
                 {
                     Targetable target = (Targetable) go;
