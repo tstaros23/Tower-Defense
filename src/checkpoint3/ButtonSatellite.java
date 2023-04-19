@@ -3,6 +3,8 @@
  The "ButtonSatellite" class represents a clickable button object in a graphical environment
  that creates a "Satellite" object when clicked. It extends the "GameObject" superclass and
  implements the "Clickable" interface.
+ @author Theodore A. Staros
+ @version April 19, 2023
  */
 
 package checkpoint3;

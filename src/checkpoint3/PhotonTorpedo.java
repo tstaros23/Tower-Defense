@@ -1,3 +1,9 @@
+/**
+ * this class creates a PhotonTorpedo that update and draw itself
+  @author Theodore A. Staros
+  @version April 19, 2023
+ */
+
 package checkpoint3;
 
 import java.awt.*;
