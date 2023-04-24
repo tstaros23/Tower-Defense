@@ -88,6 +88,26 @@ public class Path
 	public void add (int x, int y)
 	{
 		pathPoints.add(new Point(x,y));
+
+		totalPathLength = 0;
+
+		// If we count segments starting at 1,
+		//   segment 1 is path[0]   ... path[1], and
+		//   segment n is path[n-1] ... path[n].
+		//
+		// In an array or list, the last entry is indexed one less
+		//   than the length of the list, so as long as the index is
+		//   less than the length (or size) of the list, it is valid.
+		//
+		// Remember, for arrays use path.length.  For List objects, use path.size()
+
+		for (int i = 1; i < pathPoints.size(); i++)
+		{
+			Point start = pathPoints.get(i-1);  // Extract segment start/end
+			Point end   = pathPoints.get(i);
+
+			totalPathLength += start.distance(end);
+		}
 	}
 
 	/**
