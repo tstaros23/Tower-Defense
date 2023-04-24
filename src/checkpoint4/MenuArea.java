@@ -31,6 +31,7 @@ public class MenuArea extends GameObject
     public void setUpMenuArea()
     {
         state.addGameObject(new ButtonSatellite(control, state));
+        state.addGameObject(new ButtonSpaceStation(control, state));
     }
 
     @Override
