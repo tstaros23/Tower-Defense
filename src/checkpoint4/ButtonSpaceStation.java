@@ -53,7 +53,7 @@ public class ButtonSpaceStation extends GameObject implements Clickable
         g.setColor(Color.GRAY);
         g.fillRoundRect(632, 252, 71, 100, 10, 10);
 
-        g.drawImage(control.getImage("kisspng-spacecraft-clip-art-spaceship-png-clipart-5a77ef155b9f58.5119334115178094293753.png"), 640, 410, null);
+        g.drawImage(control.getImage("kisspng-spacecraft-clip-art-spaceship-png-clipart-5a77ef1533c079.291368811517809429212.jpg"), 630, 252, null);
     }
 
     /**
@@ -66,7 +66,7 @@ public class ButtonSpaceStation extends GameObject implements Clickable
     {
         Point mouseLoc = state.getMouseLoc();
         if (mouseLoc.x >= 630 && mouseLoc.x <= 630+75 &&
-                mouseLoc.y >= 400 && mouseLoc.y <= 400+75)
+                mouseLoc.y >= 250 && mouseLoc.y <= 250+75)
         {
             state.addGameObject(new SpaceStation(control, state));
             return true;

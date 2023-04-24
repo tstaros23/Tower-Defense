@@ -63,6 +63,6 @@ public class Missle extends GameObject {
     public void draw(Graphics g) {
         BufferedImage missle = control.getImage("missile-transparent-background-3d-rendering-illustration_494250-19756.jpeg");
         Point loc = path.convertToCoordinates(pathPercentage);
-        g.drawImage(missle, loc.x/5, loc.y/5, null);
+        g.drawImage(missle, loc.x, loc.y, null);
     }
 }
