@@ -5,10 +5,9 @@
 
  */
 
-package checkpoint3;
+package checkpoint4;
 
 import java.awt.*;
-import java.awt.image.BufferedImage;
 
 public class Generator extends GameObject
 {

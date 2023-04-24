@@ -4,7 +4,7 @@
  * and invoking it on the event dispatch thread.
  */
 
-package checkpoint3;
+package checkpoint4;
 
 import javax.swing.*;
 

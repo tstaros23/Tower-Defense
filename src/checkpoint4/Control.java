@@ -1,4 +1,4 @@
-package checkpoint3;
+package checkpoint4;
 
 import javax.swing.*;
 import java.awt.Point;

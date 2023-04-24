@@ -4,7 +4,7 @@
  It extends the "GameObject" superclass and implements the "Animatable" interface.
  */
 
-package checkpoint3;
+package checkpoint4;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

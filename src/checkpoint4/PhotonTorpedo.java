@@ -4,7 +4,7 @@
   @version April 19, 2023
  */
 
-package checkpoint3;
+package checkpoint4;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

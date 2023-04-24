@@ -3,7 +3,7 @@
  * and allows the user to interact with the game.
  */
 
-package checkpoint3;
+package checkpoint4;
 
 import java.awt.*;
 

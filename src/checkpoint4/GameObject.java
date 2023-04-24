@@ -3,7 +3,7 @@
  * It implements the Animatable interface to define the basic behavior of a game object.
  */
 
-package checkpoint3;
+package checkpoint4;
 
 import java.awt.*;
 
