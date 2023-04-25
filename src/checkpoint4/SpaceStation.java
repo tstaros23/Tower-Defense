@@ -9,6 +9,7 @@ public class SpaceStation extends GameObject implements Clickable
     private GameState state;
     private Point location;
     private boolean isMoving;
+    private double cooldownTime;
 
     //constructor
     public SpaceStation (Control control, GameState state)
@@ -17,6 +18,7 @@ public class SpaceStation extends GameObject implements Clickable
         this.control = control;
         this.state = state;
         isMoving = true;
+        cooldownTime = 100;
     }
 
     /**
@@ -31,6 +33,7 @@ public class SpaceStation extends GameObject implements Clickable
     @Override
     public void update(double timeElapsed)
     {
+        cooldownTime -= timeElapsed;
 
         if (isMoving) {
             // if the player is moving, update the location based on the mouse location
@@ -40,13 +43,13 @@ public class SpaceStation extends GameObject implements Clickable
         {
             // if the player is not moving, check for nearby target objects
             Targetable target = state.getNearestTargetableObject(location);
-            if (target != null)
-            {
-                // if a nearby target object is found, calculate the distance to it
-                double distance = location.distance((target.getLocation().getX()), (target.getLocation().getY()));
-                if (distance < 300)
+            double distance = location.distance((target.getLocation().getX()), (target.getLocation().getY()));
+            if (target != null) {
+                if (distance < 300 && cooldownTime <= 0) {
+                    cooldownTime = 500;
                     // if the target is within range, create a new photon torpedo object aimed at it
-                    state.addGameObject(new Missle(control, state, location,  target.getLocation(), (GameObject) target ));
+                    state.addGameObject(new Missle(control, state, location, target.getLocation(), (GameObject) target));
+                }
             }
 
         }

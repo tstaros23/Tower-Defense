@@ -6,16 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="04a09404-6f64-4e7c-bf97-02523cb67d74" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kisspng-spacecraft-clip-art-spaceship-png-clipart-5a77ef1533c079.291368811517809429212.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/kisspng-spacecraft-clip-art-spaceship-png-clipart-5a77ef1533c079.291368811517809429212.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/missile-transparent-background-3d-rendering-illustration_494250-19756.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/missile-transparent-background-3d-rendering-illustration_494250-19756.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/Asteroid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/Asteroid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/Comet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/Comet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/PhotonTorpedo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/PhotonTorpedo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/Satellite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/Satellite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkpoint4/Asteroid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/Asteroid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkpoint4/Comet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/Comet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkpoint4/PhotonTorpedo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/PhotonTorpedo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/SpaceStation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/SpaceStation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/checkpoint4/Satellite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/Satellite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkpoint4/SpaceStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/SpaceStation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +84,7 @@
       <workItem from="1681853965178" duration="1138000" />
       <workItem from="1681855113326" duration="31903000" />
       <workItem from="1682353530172" duration="402000" />
-      <workItem from="1682353939565" duration="14339000" />
+      <workItem from="1682353939565" duration="16237000" />
     </task>
     <servers />
   </component>

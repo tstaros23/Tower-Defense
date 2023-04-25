@@ -34,7 +34,6 @@ public class Satellite extends GameObject implements Clickable
     public void update(double timeElapsed)
     {
         cooldownTime -= timeElapsed;
-        System.out.println(cooldownTime);
 
         if (isMoving) {
             // if the player is moving, update the location based on the mouse location
@@ -49,8 +48,7 @@ public class Satellite extends GameObject implements Clickable
                 // if a nearby target object is found, calculate the distance to it
                 double distance = location.distance((target.getLocation().getX()), (target.getLocation().getY()));
                 if (distance < 300 && cooldownTime <= 0) {
-                    System.out.println("????");
-                    cooldownTime = 100;
+                    cooldownTime = 500;
                     // if the target is within range, create a new photon torpedo object aimed at it
                     state.addGameObject(new PhotonTorpedo(control, state, location, target.getLocation(), (GameObject) target));
                 }
