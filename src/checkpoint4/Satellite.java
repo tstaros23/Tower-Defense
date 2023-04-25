@@ -87,11 +87,8 @@ public class Satellite extends GameObject implements Clickable
             Point mouseLoc = state.getMouseLoc();
             for(int i = 0; i < control.getPath().getPointCount() -1; i++)
             {
-                System.out.println(mouseLoc.distance(control.getPath().getX(i), control.getPath().getY(i)));
                 if (mouseLoc.distance(control.getPath().getX(i), control.getPath().getY(i)) < 100)
                 {
-                    System.out.println(mouseLoc);
-                    System.out.println(mouseLoc.distance(control.getPath().getX(i), control.getPath().getY(i)));
                     hasExpired = true;
                 }
             }

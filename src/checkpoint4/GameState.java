@@ -22,6 +22,7 @@ public class GameState
     private List<GameObject> currentFrameObjects;
     private List<GameObject> nextFrameObjects;
     private int cityCount;
+    private int money;
     private Point mouseLocation;
     private double elapsedTime;
     private long lastFrameStartTime;
@@ -35,6 +36,7 @@ public class GameState
     {
         currentFrameObjects = new ArrayList<GameObject>();
         cityCount = 20;
+        money = 1000;
         lastFrameStartTime = System.currentTimeMillis();
     }
     public double getElapsedTime ()
@@ -51,6 +53,16 @@ public class GameState
     public int getCityCount ()
     {
         return cityCount;
+    }
+
+    public int getMoney ()
+    {
+        return money;
+    }
+
+    public void adjustMoney (int amount)
+    {
+        money -= amount;
     }
 
     /**

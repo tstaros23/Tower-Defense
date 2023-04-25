@@ -50,5 +50,6 @@ public class MenuArea extends GameObject
         g.setFont(new Font("Arial", Font.BOLD, 24));
         g.drawString("Look up!", 630, 50);
         g.drawString("Cities left: " + state.getCityCount(), 630, 100);
+        g.drawString("Money left: " + state.getMoney(), 600, 150);
     }
 }

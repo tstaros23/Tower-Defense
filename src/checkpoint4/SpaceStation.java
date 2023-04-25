@@ -82,6 +82,13 @@ public class SpaceStation extends GameObject implements Clickable
     public boolean consumeClick() {
         if (isMoving) {
             Point mouseLoc = state.getMouseLoc();
+            for(int i = 0; i < control.getPath().getPointCount() -1; i++)
+            {
+                if (mouseLoc.distance(control.getPath().getX(i), control.getPath().getY(i)) < 100)
+                {
+                    hasExpired = true;
+                }
+            }
             if (mouseLoc.x < 0 || mouseLoc.y < 0 || mouseLoc.x > 600 || mouseLoc.y > 600)
                 hasExpired = true;
             isMoving = false;
