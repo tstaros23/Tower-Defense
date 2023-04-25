@@ -32,7 +32,7 @@ public class Asteroid extends GameObject implements Targetable
     @Override
     public void update(double timeElapsed)
     {
-        pathPercentage += (0.0016) * timeElapsed;
+        pathPercentage += (0.00016) * timeElapsed;
         age += timeElapsed;
        // System.out.println(pathPercentage);
 
