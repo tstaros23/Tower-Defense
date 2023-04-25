@@ -48,7 +48,7 @@ public class Satellite extends GameObject implements Clickable
                 // if a nearby target object is found, calculate the distance to it
                 double distance = location.distance((target.getLocation().getX()), (target.getLocation().getY()));
                 if (distance < 300 && cooldownTime <= 0) {
-                    cooldownTime = 500;
+                    cooldownTime = 1000;
                     // if the target is within range, create a new photon torpedo object aimed at it
                     state.addGameObject(new PhotonTorpedo(control, state, location, target.getLocation(), (GameObject) target));
                 }
@@ -82,8 +82,20 @@ public class Satellite extends GameObject implements Clickable
 
     @Override
     public boolean consumeClick() {
+
         if (isMoving) {
             Point mouseLoc = state.getMouseLoc();
+            for(int i = 0; i < control.getPath().getPointCount() -1; i++)
+            {
+                System.out.println(mouseLoc.distance(control.getPath().getX(i), control.getPath().getY(i)));
+                if (mouseLoc.distance(control.getPath().getX(i), control.getPath().getY(i)) < 100)
+                {
+                    System.out.println(mouseLoc);
+                    System.out.println(mouseLoc.distance(control.getPath().getX(i), control.getPath().getY(i)));
+                    hasExpired = true;
+                }
+            }
+
             if (mouseLoc.x < 0 || mouseLoc.y < 0 || mouseLoc.x > 600 || mouseLoc.y > 600)
                 hasExpired = true;
             isMoving = false;
