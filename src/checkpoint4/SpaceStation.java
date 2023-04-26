@@ -86,11 +86,18 @@ public class SpaceStation extends GameObject implements Clickable
             {
                 if (mouseLoc.distance(control.getPath().getX(i), control.getPath().getY(i)) < 100)
                 {
+                    if (state.getMoney() <= 1000)
+                        state.addMoney(300);
                     hasExpired = true;
                 }
             }
+
             if (mouseLoc.x < 0 || mouseLoc.y < 0 || mouseLoc.x > 600 || mouseLoc.y > 600)
+            {
+                if (state.getMoney() <= 1000)
+                    state.addMoney(300);
                 hasExpired = true;
+            }
             isMoving = false;
             location = mouseLoc;
             return true;

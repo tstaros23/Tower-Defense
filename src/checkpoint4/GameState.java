@@ -69,7 +69,7 @@ public class GameState
 
     public void addMoney (int amount)
     {
-        if (money < 1000)
+        if (money <= 1000)
             money += amount;
     }
 

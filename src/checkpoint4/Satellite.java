@@ -89,12 +89,16 @@ public class Satellite extends GameObject implements Clickable
             {
                 if (mouseLoc.distance(control.getPath().getX(i), control.getPath().getY(i)) < 100)
                 {
+                    state.addMoney(100);
                     hasExpired = true;
                 }
             }
 
             if (mouseLoc.x < 0 || mouseLoc.y < 0 || mouseLoc.x > 600 || mouseLoc.y > 600)
+            {
+                state.addMoney(100);
                 hasExpired = true;
+            }
             isMoving = false;
             location = mouseLoc;
             return true;

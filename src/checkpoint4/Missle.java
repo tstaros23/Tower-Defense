@@ -55,6 +55,8 @@ public class Missle extends GameObject {
             //set the expired flag on both the enemy object and this object to true
             enemy.hasExpired = true;
             hasExpired = true;
+            if (state.getMoney() <= 1000)
+                state.addMoney(10);
         }
 
     }
