@@ -62,7 +62,9 @@ public class GameState
 
     public void adjustMoney (int amount)
     {
-        money -= amount;
+            if (money > 0)
+                money -= amount;
+
     }
 
     /**
