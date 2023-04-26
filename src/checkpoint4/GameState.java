@@ -60,11 +60,17 @@ public class GameState
         return money;
     }
 
-    public void adjustMoney (int amount)
+    public void subtractMoney (int amount)
     {
             if (money > 0)
                 money -= amount;
 
+    }
+
+    public void addMoney (int amount)
+    {
+        if (money < 1000)
+            money += amount;
     }
 
     /**

@@ -40,6 +40,7 @@ public class Asteroid extends GameObject implements Targetable
         {
             // Remove and add
             hasExpired = true;
+            state.addMoney(10);
             //state.addGameObject(new Asteroid(control, state));
         }
     }

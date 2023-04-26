@@ -8,10 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/ButtonSpaceStation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/ButtonSpaceStation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/GameState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/SpaceStation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/SpaceStation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/checkpoint4/ButtonSpaceStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/ButtonSpaceStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkpoint4/Comet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/Comet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/checkpoint4/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkpoint4/SpaceStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/SpaceStation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +85,7 @@
       <workItem from="1681853965178" duration="1138000" />
       <workItem from="1681855113326" duration="31903000" />
       <workItem from="1682353530172" duration="402000" />
-      <workItem from="1682353939565" duration="29317000" />
+      <workItem from="1682353939565" duration="33458000" />
     </task>
     <servers />
   </component>

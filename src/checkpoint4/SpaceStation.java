@@ -95,6 +95,7 @@ public class SpaceStation extends GameObject implements Clickable
             location = mouseLoc;
             return true;
         }
+
         return false;
     }
 

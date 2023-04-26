@@ -68,6 +68,7 @@ public class ButtonSatellite extends GameObject implements Clickable
         if (mouseLoc.x >= 630 && mouseLoc.x <= 630+75 &&
             mouseLoc.y >= 400 && mouseLoc.y <= 400+75)
         {
+            state.subtractMoney(100);
             state.addGameObject(new Satellite(control, state));
             return true;
         }
