@@ -51,6 +51,11 @@ public class View extends JPanel
         {
             if (state.getCityCount() > 0)
                 a.draw(g);
+            else
+            {
+                g.setFont(new Font("Arial", Font.BOLD, 24));
+                g.drawString("Game Over!", 330, 200);
+            }
         }
     }
 }
