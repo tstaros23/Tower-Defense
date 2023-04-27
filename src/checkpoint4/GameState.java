@@ -54,6 +54,9 @@ public class GameState
     {
         return cityCount;
     }
+    public void subtractCityCount (int amount) {
+        cityCount -= 1;
+    }
 
     public int getMoney ()
     {

@@ -7,8 +7,10 @@
     <list default="true" id="04a09404-6f64-4e7c-bf97-02523cb67d74" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/GameState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/Satellite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/Satellite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkpoint4/Satellite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/Satellite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkpoint4/Asteroid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/Asteroid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkpoint4/Comet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/Comet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkpoint4/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkpoint4/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +87,7 @@
       <workItem from="1682353530172" duration="402000" />
       <workItem from="1682353939565" duration="37946000" />
       <workItem from="1682556616271" duration="21000" />
+      <workItem from="1682636943044" duration="1030000" />
     </task>
     <servers />
   </component>

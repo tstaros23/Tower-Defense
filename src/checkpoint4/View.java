@@ -48,6 +48,9 @@ public class View extends JPanel
     public void paint (Graphics g)
     {
         for (Animatable a : state.getCurrentObjects())
-            a.draw(g);
+        {
+            if (state.getCityCount() > 0)
+                a.draw(g);
+        }
     }
 }

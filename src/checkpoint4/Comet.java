@@ -38,8 +38,8 @@ public class Comet extends GameObject implements Targetable
         if (pathPercentage >= 1.00)
         {
             // Remove and add
+            state.subtractCityCount(1);
             hasExpired = true;
-            state.addMoney(10);
             //state.addGameObject(new Asteroid(control, state));
         }
     }
