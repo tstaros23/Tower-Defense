@@ -53,6 +53,7 @@ public class Missle extends GameObject {
         if (pathPercentage >= 1.00)
         {
             //set the expired flag on both the enemy object and this object to true
+
             enemy.hasExpired = true;
             hasExpired = true;
             if (state.getMoney() <= 1000)
