@@ -75,7 +75,7 @@ public class Generator extends GameObject
         if (countDownToNextComet <= 0)
         {
             countDownToNextComet = 300.0;
-            state.addGameObject(new Comet(control, state));
+            state.addGameObject(new Comet(control, state, explosion));
             cometCount++;
             if (cometCount == numberOfComets)
             {

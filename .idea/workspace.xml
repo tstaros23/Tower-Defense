@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04a09404-6f64-4e7c-bf97-02523cb67d74" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pngegg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/checkpoint4/Explosion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/ButtonSatellite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/ButtonSatellite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/ButtonSpaceStation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/ButtonSpaceStation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/Asteroid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/Asteroid.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/Comet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tower Defense Checkpoint 4/checkpoint4/Comet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkpoint4/Asteroid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/Asteroid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/checkpoint4/Comet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/Comet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkpoint4/Missle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkpoint4/Missle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +86,7 @@
       <workItem from="1682353530172" duration="402000" />
       <workItem from="1682353939565" duration="37946000" />
       <workItem from="1682556616271" duration="21000" />
-      <workItem from="1682636943044" duration="11638000" />
+      <workItem from="1682636943044" duration="14872000" />
     </task>
     <servers />
   </component>

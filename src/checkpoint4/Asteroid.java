@@ -34,7 +34,6 @@ public class Asteroid extends GameObject implements Targetable
     {
         pathPercentage += (0.00016) * timeElapsed;
         age += timeElapsed;
-       // System.out.println(pathPercentage);
 
         if (pathPercentage >= 1.00)
         {
