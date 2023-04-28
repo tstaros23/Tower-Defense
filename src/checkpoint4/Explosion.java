@@ -18,6 +18,7 @@ public class Explosion extends GameObject {
     private Path path;
     private double pathPercentage;
     private GameObject enemy;
+    private int age = 0;
 
     public Explosion (Control control, GameState state)
     {
@@ -36,6 +37,9 @@ public class Explosion extends GameObject {
      */
     @Override
     public void update(double timeElapsed) {
+        age += timeElapsed;
+        if (age == 20)
+            hasExpired = true;
     }
 
     @Override

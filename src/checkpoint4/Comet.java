@@ -11,7 +11,6 @@ public class Comet extends GameObject implements Targetable
     private GameState state;
     private double age;
     private double pathPercentage;
-    private GameObject explosion;
 
     /**
      * Constructs a new Comet object with the specified Control and GameState.
@@ -19,11 +18,10 @@ public class Comet extends GameObject implements Targetable
      * @param state The GameState object of the game
      */
 
-    public Comet(Control control, GameState state, GameObject explosion)
+    public Comet(Control control, GameState state)
     {
         this.control = control;
         this.state = state;
-        this.explosion = explosion;
         pathPercentage = 0.0;
     }
     /**
@@ -43,7 +41,6 @@ public class Comet extends GameObject implements Targetable
             state.subtractCityCount(1);
             state.addGameObject(new Explosion(control, state));
             hasExpired = true;
-            explosion.hasExpired = true;
         }
     }
     /**
