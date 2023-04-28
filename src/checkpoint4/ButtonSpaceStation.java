@@ -64,11 +64,13 @@ public class ButtonSpaceStation extends GameObject implements Clickable
     @Override
     public boolean consumeClick()
     {
+        if (state.getMoney() <= 0)
+            return false;
         Point mouseLoc = state.getMouseLoc();
         if (mouseLoc.x >= 630 && mouseLoc.x <= 630+75 &&
                 mouseLoc.y >= 250 && mouseLoc.y <= 250+75)
         {
-            state.subtractMoney(300);
+            state.subtractMoney(1000);
             state.addGameObject(new SpaceStation(control, state));
             return true;
         }
