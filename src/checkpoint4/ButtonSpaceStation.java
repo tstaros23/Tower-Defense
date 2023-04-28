@@ -70,7 +70,7 @@ public class ButtonSpaceStation extends GameObject implements Clickable
         if (mouseLoc.x >= 630 && mouseLoc.x <= 630+75 &&
                 mouseLoc.y >= 250 && mouseLoc.y <= 250+75)
         {
-            state.subtractMoney(1000);
+            state.subtractMoney(500);
             state.addGameObject(new SpaceStation(control, state));
             return true;
         }
