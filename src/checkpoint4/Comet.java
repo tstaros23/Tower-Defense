@@ -6,6 +6,9 @@ import java.awt.image.BufferedImage;
 public class Comet extends GameObject implements Targetable
 {
     // instance variables
+    /**
+     * intitializes control, state, and pathPercentage
+     */
 
     private Control control;
     private GameState state;
@@ -33,13 +36,14 @@ public class Comet extends GameObject implements Targetable
     {
         pathPercentage += (0.00016) * timeElapsed;
         age += timeElapsed;
-        // System.out.println(pathPercentage);
 
         if (pathPercentage >= 1.00)
         {
             // Remove and add
             state.subtractCityCount(1);
             state.addGameObject(new Explosion(control, state));
+            state.addGameObject(new Flame(control, state));
+            state.addGameObject(new Exploded(control, state));
             hasExpired = true;
         }
     }

@@ -1,3 +1,11 @@
+/**
+ * This Asteroid class  constructs an Asteroid that can update as it moves along the path and be drawn at each path point coordinate
+ * It implements the Animatable interface and extends GameObject to define the basic behavior of a game object.
+ *
+ * @author Theodore A. Staros
+ *  @version April 19, 2023
+ */
+
 package checkpoint4;
 
 import java.awt.*;
@@ -40,6 +48,8 @@ public class Asteroid extends GameObject implements Targetable
             // Remove and add
             state.subtractCityCount(1);
             state.addGameObject(new Explosion(control, state));
+            state.addGameObject(new Flame(control, state));
+            state.addGameObject(new Exploded(control, state));
             hasExpired = true;
         }
     }

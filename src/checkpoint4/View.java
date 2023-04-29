@@ -50,7 +50,9 @@ public class View extends JPanel
         for (Animatable a : state.getCurrentObjects())
         {
             if (state.getCityCount() > 0)
+            {
                 a.draw(g);
+            }
             else
             {
                 g.setFont(new Font("Arial", Font.BOLD, 24));

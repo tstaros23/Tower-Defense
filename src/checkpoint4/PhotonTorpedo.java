@@ -22,6 +22,9 @@ public class PhotonTorpedo extends GameObject {
     public PhotonTorpedo (Control control, GameState state, Point source, Point target, GameObject enemy)
     {
         // constructor
+        /**
+         * initializes the control, state, source, target, and enemy.
+         */
         this.control = control;
         this.state = state;
         this.source = source;

@@ -57,11 +57,12 @@ public class Generator extends GameObject
         // decrease the countdown timers for asteroids and comets
         countDownToNextAsteroid -= timeElapsed;
         countDownToNextComet -= timeElapsed;
+        countDownToNextComet -= timeElapsed;
 
         if (countDownToNextAsteroid <= 0)
         {
             // if the countdown timer for asteroids reaches zero, add a new asteroid object
-            countDownToNextAsteroid = 300.0;
+            countDownToNextAsteroid = 2000.0;
             state.addGameObject(new Asteroid(control, state));
             asteroidCount++;
             // if the maximum number of asteroids has been added, adjust the countdown timer and asteroid count
@@ -74,7 +75,7 @@ public class Generator extends GameObject
         }
         if (countDownToNextComet <= 0)
         {
-            countDownToNextComet = 300.0;
+            countDownToNextComet = 2000.0;
             state.addGameObject(new Comet(control, state));
             cometCount++;
             if (cometCount == numberOfComets)

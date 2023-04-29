@@ -35,10 +35,15 @@ public class GameState
     public GameState ()
     {
         currentFrameObjects = new ArrayList<GameObject>();
-        cityCount = 20;
+        cityCount = 50;
         money = 1000;
         lastFrameStartTime = System.currentTimeMillis();
     }
+
+    /**
+     * gets the elapsed time from each update
+     * @return elapsedTime
+     */
     public double getElapsedTime ()
     {
         return elapsedTime;

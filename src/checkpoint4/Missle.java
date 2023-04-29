@@ -22,6 +22,10 @@ public class Missle extends GameObject {
     public Missle (Control control, GameState state, Point source, Point target, GameObject enemy)
     {
         // constructor
+        /**
+         * initializes control, state, source, target, and enemy. Enemy is the target that the SpaceStation knows about
+         * source is the missle. enemy relates to the target so that the spacestation knows about it.
+         */
         this.control = control;
         this.state = state;
         this.source = source;

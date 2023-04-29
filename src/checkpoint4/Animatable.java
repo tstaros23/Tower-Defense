@@ -1,3 +1,11 @@
+/**
+ * This animatable interface  provides update and draw abstract methods for animatable objects that can be drawn and updated in the game.
+ * It implements the Animatable interface to define the basic behavior of a game object.
+ *
+ * @author Theodore A. Staros
+ *  @version April 19, 2023
+ */
+
 package checkpoint4;
 
 import java.awt.Graphics;

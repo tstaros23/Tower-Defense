@@ -1,7 +1,7 @@
 /**
 
- The "ButtonSatellite" class represents a clickable button object in a graphical environment
- that creates a "Satellite" object when clicked. It extends the "GameObject" superclass and
+ The "ButtonSpaceStation" class represents a clickable button object in a graphical environment
+ that creates a "SpaceStation" object when clicked. It extends the "GameObject" superclass and
  implements the "Clickable" interface.
  @author Theodore A. Staros
  @version April 19, 2023
@@ -18,7 +18,7 @@ public class ButtonSpaceStation extends GameObject implements Clickable
     private GameState state;
 
     /**
-     Constructor for the ButtonSatellite class.
+     Constructor for the ButtonSpaceStation class.
      @param control a reference to a Control object.
      @param state a reference to a GameState object.
      */
@@ -57,22 +57,25 @@ public class ButtonSpaceStation extends GameObject implements Clickable
     }
 
     /**
-     Checks if the button is clicked and creates a new Satellite object if it is.
+     Checks if the button is clicked and creates a new SpaceStation object if it is. It also helps determine where the
+     Satellite can be consumed and if it is within the button panel then money is added back to the player. If placed,
+     then it is subtracted.
      @return true if the button is clicked, false otherwise.
      */
 
     @Override
     public boolean consumeClick()
     {
-        if (state.getMoney() <= 0)
-            return false;
         Point mouseLoc = state.getMouseLoc();
         if (mouseLoc.x >= 630 && mouseLoc.x <= 630+75 &&
                 mouseLoc.y >= 250 && mouseLoc.y <= 250+75)
         {
-            state.subtractMoney(500);
-            state.addGameObject(new SpaceStation(control, state));
-            return true;
+            if (state.getMoney() >= 500)
+            {
+                state.subtractMoney(500);
+                state.addGameObject(new SpaceStation(control, state));
+                return true;
+            }
         }
 
         return false;

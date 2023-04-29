@@ -43,10 +43,12 @@ public class SpaceStation extends GameObject implements Clickable
         {
             // if the player is not moving, check for nearby target objects
             Targetable target = state.getNearestTargetableObject(location);
-            double distance = location.distance((target.getLocation().getX()), (target.getLocation().getY()));
-            if (target != null) {
+            if (target != null)
+            {
+                // if a nearby target object is found, calculate the distance to it
+                double distance = location.distance((target.getLocation().getX()), (target.getLocation().getY()));
                 if (distance < 300 && cooldownTime <= 0) {
-                    cooldownTime = 500;
+                    cooldownTime = 1000;
                     // if the target is within range, create a new photon torpedo object aimed at it
                     state.addGameObject(new Missle(control, state, location, target.getLocation(), (GameObject) target));
                 }
