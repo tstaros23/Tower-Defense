@@ -13,19 +13,16 @@ public class Explosion extends GameObject {
     //fields
     private Control control;
     private GameState state;
-    private Point source;
-    private Point target;
-    private Path path;
-    private double pathPercentage;
-    private GameObject enemy;
-    private int age = 0;
+    //private int width = 40;
+    //private int height = 40;
+    //private long lastUpdatedTime = 0;
+    //private double interval = 5;
 
     public Explosion (Control control, GameState state)
     {
         // constructor
         this.control = control;
         this.state = state;
-        this.pathPercentage = 0.0;
     }
     /**
      * Updates the state of the enemy object based on the given elapsed time.
@@ -37,8 +34,15 @@ public class Explosion extends GameObject {
      */
     @Override
     public void update(double timeElapsed) {
-        if (timeElapsed == 20)
+        if (timeElapsed >= 20)
             hasExpired = true;
+//        long currentTime = System.currentTimeMillis();
+//        if (currentTime - lastUpdatedTime >= interval)
+//        {
+//            lastUpdatedTime = currentTime;
+//            height += 10;
+//            width += 10;
+//        }
     }
 
     @Override
@@ -46,6 +50,6 @@ public class Explosion extends GameObject {
         BufferedImage explosion = control.getImage("pngegg.png");
         int xInteger = control.getPath().getX(control.getPath().getPointCount() -1);
         int yInteger = control.getPath().getY(control.getPath().getPointCount() -1);
-        g.drawImage(explosion, xInteger, yInteger, 40,40, null);
+        g.drawImage(explosion, xInteger, yInteger, 40, 40, null);
     }
 }
