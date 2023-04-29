@@ -37,8 +37,7 @@ public class Explosion extends GameObject {
      */
     @Override
     public void update(double timeElapsed) {
-        age += timeElapsed;
-        if (age == 20)
+        if (timeElapsed == 20)
             hasExpired = true;
     }
 
@@ -47,6 +46,6 @@ public class Explosion extends GameObject {
         BufferedImage explosion = control.getImage("pngegg.png");
         int xInteger = control.getPath().getX(control.getPath().getPointCount() -1);
         int yInteger = control.getPath().getY(control.getPath().getPointCount() -1);
-        g.drawImage(explosion, xInteger, yInteger, null);
+        g.drawImage(explosion, xInteger, yInteger, 40,40, null);
     }
 }

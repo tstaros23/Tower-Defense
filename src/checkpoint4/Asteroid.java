@@ -39,6 +39,7 @@ public class Asteroid extends GameObject implements Targetable
         {
             // Remove and add
             state.subtractCityCount(1);
+            state.addGameObject(new Explosion(control, state));
             hasExpired = true;
         }
     }
