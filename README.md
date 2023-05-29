@@ -1,6 +1,7 @@
 # Tower Defense
 #### Application Preview
-(https://files.slack.com/files-pri/T029P2S9M-F059FH53UK1/screen_shot_2023-05-28_at_11.06.28_pm.png)
+![image](https://github.com/tstaros23/Tower-Defense/assets/81131454/a9278889-3f7c-4eb9-b379-57ba7045e4b9)
+
 
 ## Table of  Contents
   - [Learning Goals](#Learning-Goals)
