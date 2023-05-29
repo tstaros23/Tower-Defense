@@ -7,6 +7,10 @@
   - [Learning Goals](#Learning-Goals)
   - [Install + Setup](#Set-up)
   - [Rules](#Rules)
+  - [Technologies](#technologies)
+  - [Contributors](#contributors)
+  - [Wins](#wins)
+  - [Challenges + Improvements](#challenges-+-Improvements)
 
 ## Install + Setup
 - clone this repo: (https://github.com/tstaros23/Tower-Defense)
@@ -37,3 +41,7 @@
   - Software Engineering Practices: Students will be introduced to software engineering practices, including principles of software design, code organization, documentation, and testing.
 
 These learning goals are aimed at preparing students for more advanced studies in computer science by providing them with a solid foundation in Java programming, object-oriented design, problem-solving, and software engineering principles.
+
+## Contributors
+- [Peter Jensen]
+- [Ted Staros]
