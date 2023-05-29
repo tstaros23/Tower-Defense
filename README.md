@@ -1,6 +1,6 @@
 # Tower Defense
 #### Application Preview
-<img ![image](https://github.com/tstaros23/Tower-Defense/assets/81131454/a9278889-3f7c-4eb9-b379-57ba7045e4b9) width="100" height="300">
+![image](https://github.com/tstaros23/Tower-Defense/assets/81131454/a9278889-3f7c-4eb9-b379-57ba7045e4b9)
 
 
 ## Table of  Contents
