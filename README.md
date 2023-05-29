@@ -9,7 +9,7 @@
   - [Rules](#Rules)
 
 ## Install + Setup
-- clone this repo: [here](https://github.com/tstaros23/Tower-Defense)
+- clone this repo: (https://github.com/tstaros23/Tower-Defense)
 - **Install** Java: Ensure Java is installed on your computer. You can check by opening a terminal or command prompt and running **'java -version'**. If Java is not installed, proceed to the next step.
 - **Download Java**: Visit the OpenJDK website [here](https://adoptopenjdk.net/) and download the appropriate version of Java for your operating system.
 - **Run the installer**: Once the download is complete, locate the installer file and run it. Follow the on-screen instructions to complete the installation process.
