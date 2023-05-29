@@ -43,5 +43,5 @@
 These learning goals are aimed at preparing students for more advanced studies in computer science by providing them with a solid foundation in Java programming, object-oriented design, problem-solving, and software engineering principles.
 
 ## Contributors
-- [Peter Jensen]
-- [Ted Staros]
+- Peter Jensen
+- Ted Staros
