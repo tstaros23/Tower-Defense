@@ -3,6 +3,16 @@
 
 ## Table of  Contents
   - [Learning Goals](#Learning-Goals)
+  - [Install + Setup](#set-up)
+
+## Install + Setup
+- clone this repo: [here](https://github.com/tstaros23/Tower-Defense)
+- **Install** Java: Ensure Java is installed on your computer. You can check by opening a terminal or command prompt and running **'java -version'**. If Java is not installed, proceed to the next step.
+- **Download Java**: Visit the OpenJDK website [here](https://adoptopenjdk.net/) and download the appropriate version of Java for your operating system.
+- **Run the installer**: Once the download is complete, locate the installer file and run it. Follow the on-screen instructions to complete the installation process.
+- **Verify the installation**: Open a terminal or command prompt and run **'java -version'** again. You should see the version information displayed, confirming that Java is installed correctly.
+
+
 ## Learning Goals
   - Basic Programming in Java: Students will learn the fundamentals of programming using Java as their programming language.
   - Advanced Java Topics: Students will delve into more advanced Java concepts and techniques, including object-oriented programming (inheritance and polymorphism).
