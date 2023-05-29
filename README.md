@@ -5,7 +5,8 @@
 
 ## Table of  Contents
   - [Learning Goals](#Learning-Goals)
-  - [Install + Setup](#set-up)
+  - [Install + Setup](#Set-up)
+  - [Rules](#Rules)
 
 ## Install + Setup
 - clone this repo: [here](https://github.com/tstaros23/Tower-Defense)
@@ -13,6 +14,18 @@
 - **Download Java**: Visit the OpenJDK website [here](https://adoptopenjdk.net/) and download the appropriate version of Java for your operating system.
 - **Run the installer**: Once the download is complete, locate the installer file and run it. Follow the on-screen instructions to complete the installation process.
 - **Verify the installation**: Open a terminal or command prompt and run **'java -version'** again. You should see the version information displayed, confirming that Java is installed correctly.
+
+## Rules
+- The object of the game is to defend the tower from getting hit by comets and asteroids. 
+- To defend the tower, the player must place  sattelites and/or space stateions that fire missles and torpedos at the comets and asteroids
+- Click and drag the space station or sattelite from the menu to space.
+- Sattelites shoot torpedos and space stations shoot missles
+- Sattelites and space stations cannot be placed on the asteroid and comet's path
+- Each player starts with 1000 dollars. Each time a asteroid or comet is destroyed, a player earns 10 dollars
+- Sattelites cost 100 dollars to use and space stations cost 300 dollars
+- When a player runs out of money, they cannot purchase a space station or sattelite until they earn more.
+- The player starts out with 50 cities and each time an asteroid or comet collides with earth, a city is destroyed
+- Once all 50 cites are destroyed, the game is over.
 
 
 ## Learning Goals
